@@ -19,6 +19,9 @@ namespace AnaliseCredito
 
             Console.WriteLine("Digite Sua Idade: ");
             idade = Convert.ToInt32(Console.ReadLine());
+            Console.ReadKey();
+
+            Console.WriteLine($"idade: {idade} anos");  
 
             if (idade <= 18)
             {
@@ -37,7 +40,6 @@ namespace AnaliseCredito
             Console.ForegroundColor  = ConsoleColor.Green;
             Console.WriteLine("Parabéns Você Pode fazer A Solicitação Do Empréstimo ");
             Console.WriteLine("A Idade Minima É De 18 Anos!");
-            Console.WriteLine("Pressione ENTER Para Sair!");
             Console.ResetColor();
             Console.ReadKey();
             } 
@@ -66,24 +68,20 @@ namespace AnaliseCredito
             if (valorParcela <= valorMaximoParcela)
             {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Nome:{nome} Parabéns, Seu Crédito Foi Aprovado!");
-            Console.WriteLine("Pressione ENTER Para Sair!");
+            Console.WriteLine(" Parabéns, Seu Crédito Foi Aprovado!");
             Console.ResetColor ();
+            Console.WriteLine(FiggleFonts.Starwars.Render("Obrigado Pela Preferência!"));
             Console.ReadKey();
             }
+
             else
             {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Nome:{nome} Desculpe, Seu Crédito Não Foi Aprovado.");
             Console.ResetColor ();
-            Console.WriteLine("Pressione ENTER Para Sair!");
             Console.ReadKey();
             }
-            FiggleFonts.Starwars.Render("Obrigado Pela Preferência!");
-            Console.WriteLine("Pressione ENTER Para Sair!");
-            Console.ReadKey();
-
-           
+                                  
         }
     }
 }
